@@ -64,7 +64,7 @@ fi
 }
 
 
-if [ "${preferred_shell}" = "zsh" ]
+if [ "${preferred_shell}" = "zsh" ]; then
 
   install_zsh
 
