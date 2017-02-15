@@ -56,7 +56,8 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\[$(tput setaf 3)\]⇕\[$(tput sgr0)\] ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#   PS1='\[$(tput setaf 3)\]⇕\[$(tput sgr0)\] ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -87,7 +88,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # sharing
-alias sessionshare='screen -d -m -S shared'
+alias sessionshare='screen -d shared'
 alias sessionjoin='screen -x shared'
 alias wanip='getent hosts `dig +short myip.opendns.com @resolver1.opendns.com`'
 
@@ -137,7 +138,7 @@ fi
 
 # /RUBYDEV
 
-# 
+#
 
 export IBUS_ENABLE_SYNC_MODE=1 # JetBrains issues with IBus prior 1.5.11
 
@@ -191,4 +192,3 @@ fi
 [ -f ~/.bashrc.local ] && source ~/bashrc.local
 
 #[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-

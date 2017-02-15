@@ -176,7 +176,7 @@ alias gitflow-hotfix-finish='~/dotfiles/gitflow/hotfix_finish.sh'
 fi
 
 # sharing
-alias sessionshare='screen -d -m -S shared'
+alias sessionshare='screen -d shared'
 alias sessionjoin='screen -x shared'
 alias wanip='getent hosts `dig +short myip.opendns.com @resolver1.opendns.com`'
 
@@ -252,4 +252,3 @@ if [[ -n $SSH_CONNECTION ]]; then
   echo " .... remote session `echo $USER`@`hostname` .... "
   PROMPT="%{$fg_bold[yellow]%}⇕ ${PROMPT}"
 fi
-
