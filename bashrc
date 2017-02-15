@@ -88,7 +88,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # sharing
-alias sessionshare='screen -d shared'
+alias sessionshare='screen -d -R shared'
 alias sessionjoin='screen -x shared'
 alias wanip='getent hosts `dig +short myip.opendns.com @resolver1.opendns.com`'
 
